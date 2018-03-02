@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+
+
+
+
+  <meta name="keywords" content="Hexo," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="前言托管前提托管 Hexo 也很简单。然而在托管前，您必须检查电脑中是否已成功安装部署Hexo（正常浏览本地化测试站点为准），如果您的电脑中已经成功安装部署Hexo，请跳过此步，否则，请根据以下教程指示完成安装部署。 Hexo系列教程：基础篇（1）Windows下安装部署Hexo 托管特性GitHub和Coding又是什么？GitHub是国外公开仓库免费、私有仓库收费的Git代码托管平台。利用G">
+<meta name="keywords" content="Hexo">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo系列教程：基础篇（2）Hexo托管到GitHub和Coding">
+<meta property="og:url" content="http://blog.neday.cn/2018/03/02/Hexo系列教程：基础篇（2）Hexo托管到GitHub和Coding/index.html">
+<meta property="og:site_name" content="苏晟&#39;s Blog">
+<meta property="og:description" content="前言托管前提托管 Hexo 也很简单。然而在托管前，您必须检查电脑中是否已成功安装部署Hexo（正常浏览本地化测试站点为准），如果您的电脑中已经成功安装部署Hexo，请跳过此步，否则，请根据以下教程指示完成安装部署。 Hexo系列教程：基础篇（1）Windows下安装部署Hexo 托管特性GitHub和Coding又是什么？GitHub是国外公开仓库免费、私有仓库收费的Git代码托管平台。利用G">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2017-03-29T07:00:31.232Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo系列教程：基础篇（2）Hexo托管到GitHub和Coding">
+<meta name="twitter:description" content="前言托管前提托管 Hexo 也很简单。然而在托管前，您必须检查电脑中是否已成功安装部署Hexo（正常浏览本地化测试站点为准），如果您的电脑中已经成功安装部署Hexo，请跳过此步，否则，请根据以下教程指示完成安装部署。 Hexo系列教程：基础篇（1）Windows下安装部署Hexo 托管特性GitHub和Coding又是什么？GitHub是国外公开仓库免费、私有仓库收费的Git代码托管平台。利用G">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://blog.neday.cn/2018/03/02/Hexo系列教程：基础篇（2）Hexo托管到GitHub和Coding/"/>
+
+
+
+
+
+  <title>Hexo系列教程：基础篇（2）Hexo托管到GitHub和Coding | 苏晟's Blog</title>
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?5e783c61f6316a3becf5a44f4b640109";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">苏晟's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Android程序猿，信息安全爱好者</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404.html" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />
+            
+            公益404
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-coupon">
+          <a href="http://www.neday.cn" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            coupon
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://blog.neday.cn/2018/03/02/Hexo系列教程：基础篇（2）Hexo托管到GitHub和Coding/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="苏晟, nEdAy">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="苏晟's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Hexo系列教程：基础篇（2）Hexo托管到GitHub和Coding</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-02T10:11:18+08:00">
+                2018-03-02
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <hr>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><h3 id="托管前提"><a href="#托管前提" class="headerlink" title="托管前提"></a>托管前提</h3><p>托管 Hexo 也很简单。然而在托管前，您必须检查电脑中是否已成功安装部署Hexo（正常浏览本地化测试站点为准），如果您的电脑中已经成功安装部署Hexo，请跳过此步，否则，请根据以下教程指示完成安装部署。</p>
+<p><a href="http://blog.neday.cn/2016/06/21/Hexo系列教程：基础篇（1）Windows下安装部署Hexo">Hexo系列教程：基础篇（1）Windows下安装部署Hexo</a></p>
+<h3 id="托管特性"><a href="#托管特性" class="headerlink" title="托管特性"></a>托管特性</h3><h4 id="GitHub和Coding又是什么？"><a href="#GitHub和Coding又是什么？" class="headerlink" title="GitHub和Coding又是什么？"></a>GitHub和Coding又是什么？</h4><p><a href="https://github.com" target="_blank" rel="noopener">GitHub</a>是国外公开仓库免费、私有仓库收费的Git代码托管平台。利用Github Page服务可以免费创建一个静态网站。</p>
+<p><a href="http://www.coding.net" target="_blank" rel="noopener">Coding</a>是国内首个Git代码托管平台GitCafe的前身，现已被Coding收购，公开、私有仓库皆免费，同样提供免费的Page服务。</p>
+<h4 id="Page服务是什么？"><a href="#Page服务是什么？" class="headerlink" title="Page服务是什么？"></a>Page服务是什么？</h4><p>Page服务本用于介绍托管在代码托管平台的项目，由于其空间免费稳定，可以被认为是用户编写的、托管在GitHub上的静态网页，所以可以搭建一个静态博客站点。</p>
+<p>Hexo可以部署在自己的Node服务器上面，也可以部署Git代码托管平台的Page服务上面。对于个人用户来说，部署其上好处颇多，不仅可以省去服务器的成本，还可以减少各种系统运维的麻烦事(系统管理、备份、网络)。</p>
+<h4 id="为什么用两个代码托管平台？"><a href="#为什么用两个代码托管平台？" class="headerlink" title="为什么用两个代码托管平台？"></a>为什么用两个代码托管平台？</h4><p>目前博客主要访问者是国内用户，GitHub服务器在国内可能有所限制，在国内理论上其访问Coding要比GitHub是要快不少的，而且就算GitHub被墙了，也可以利用把博客域名解析到Coding。并且可以利用域名解析实现默认（国内）线路走Coding，海外（国外）线路走GitHub，实现网站分流访问。通过<a href="http://ping.chinaz.com/" target="_blank" rel="noopener">站长之家测速</a>对比测试<a href="nEdAy.github.io">GitHub站点</a>和<a href="neday.coding.me">Coding站点</a>的访问效果， Ping检测无明显差异，网站测速国内还是Coding占优。</p>
+<hr>
+<h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><h3 id="注册GitHub和Coding帐号"><a href="#注册GitHub和Coding帐号" class="headerlink" title="注册GitHub和Coding帐号"></a>注册GitHub和Coding帐号</h3><p>访问官网注册，<a href="https://github.com" target="_blank" rel="noopener">GitHub</a>、<a href="http://www.coding.net" target="_blank" rel="noopener">Coding</a>。</p>
+<p>注册时，请认真填写Username和Email Address，因为其构建成功通知或失败原因都是通过邮箱推送的。</p>
+<h3 id="创建Repository（项目仓库）"><a href="#创建Repository（项目仓库）" class="headerlink" title="创建Repository（项目仓库）"></a>创建Repository（项目仓库）</h3><p>注册并登陆GitHub和Coding官网成功后，点击页面右上角的+，选择New repository（新建项目仓库）。</p>
+<p>使用Page搭建博客建立仓库时，必须与你用户名相关联，其仓库名必须为固定写法：</p>
+<p>GitHub：固定项目名称格式：<strong>your_user_name.github.io</strong>    ——&gt;  <strong>nEdAy.github.io</strong> </p>
+<p>Coding：建议项目名称格式：<strong>your_user_name</strong>  ——&gt;  <strong>neday</strong> </p>
+<p><strong>注意：其仓库属性必须选择Public（公开）。原因是如果项目弄成私有，博客便是纯文本模式，无法显示js效果，只能用演示功能才可正常浏览，但该功能是收费的。</strong></p>
+<h3 id="修改Hexo配置文件，建立关联"><a href="#修改Hexo配置文件，建立关联" class="headerlink" title="修改Hexo配置文件，建立关联"></a>修改Hexo配置文件，建立关联</h3><p>然后建立关联，我的Hexo部署在blog文件夹中，现在我们需要修改Hexo配置文件_config.yml文件来建立关联，其位置在blog根目录下。文本编辑器打开_config.yml文件，翻到最下面，找到如下位置，修改为</p>
+<pre><code>deploy:
+  type: git
+  repo:
+    coding: https://git.coding.net/yourname/yourname.git,master
+    github: https://github.com/yourname/yourname.github.io.git,master
+</code></pre><p><strong>注意：</strong> </p>
+<p> <strong>1. 其中“yourname”替换成你的Github或Coding账户名;</strong><br> <strong>2. 注意在yml文件中，所有接有内容的:和所接内容之间，必须以空格间隔。</strong><br> <strong>3. Hexo 3.x后deploy为上述输入格式</strong></p>
+<p>然后执行命令：</p>
+<pre><code>`$ npm install hexo-deployer-git --save
+</code></pre><h3 id="配置SSH-Key"><a href="#配置SSH-Key" class="headerlink" title="配置SSH-Key"></a>配置SSH-Key</h3><p>1.如果你是第一次使用Git提交到GitHub或者Coding，建议先配置SSH-Key与代码托管平台建立联系。</p>
+<p>首先检查本地SSH-Key的设置，查看现有的SSH-Key密钥：</p>
+<pre><code>`$  cd ~/. ssh
+</code></pre><p>如果提示：No such file or directory 说明你是第一次使用Git。</p>
+<p>2.新建SSH-Key：</p>
+<pre><code>`$ ssh-keygen -t rsa -C &quot;邮件地址@youremail.com&quot;
+
+Generating public/private rsa key pair.
+Enter file in which to save the key (/Users/your_user_directory/.ssh/id_rsa):&lt;此处直接回车&gt;
+</code></pre><p><strong>注意：</strong> </p>
+<p> <strong>1. 其中“邮件地址@youremail.com”替换成你的自己的邮箱地址；</strong><br> <strong>2. 此处的「-C」的是大写的「C」</strong></p>
+<p>3.然后系统会要你输入密码：</p>
+<pre><code>Enter passphrase (empty for no passphrase):&lt;输入加密串&gt;
+Enter same passphrase again:&lt;再次输入加密串&gt;
+</code></pre><p>此处提示你输入一个密码，该密码会在你提交项目时使用，如果为空的话提交项目时则不用输入。</p>
+<p><strong>注意：</strong> </p>
+<p> <strong>1. 输入密码的时候没有星号字样的，直接输入然后回车确认即可；</strong><br> <strong>2. 看到The key;s randomart image is:字符图，即新建SSH-Key成功。</strong></p>
+<p>4.然后，添加SSH-Key到GitHub和Coding,以完成SSH链接的设置。</p>
+<blockquote>
+<p>1、打开本地 \Users\用户名.ssh\id_rsa.pub 文件。此文件里面内容为刚才生成的SSH-Key密钥。如果看不到这个文件，你需要设置文件夹选项——显示隐藏文件。然后准确的复制这个文件的内容。<br>2、登陆GitHub（Coding）系统，点击右上角的 Account Settings（账户）—-&gt;SSH Public keys（SSH 公钥） —-&gt; add another public keys。<br>3、把你本地生成的密钥复制到里面Key文本框（SSH-RSA 公钥内容）中，公钥名称可为你的邮箱或空，然后点击 add key（添加）即可。</p>
+</blockquote>
+<p>5.最后，测试SSH是否配置成功</p>
+<p>打开Git Bash，可以输入下面的命令，看看设置是否成功，<a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>的部分不要修改：</p>
+<pre><code>$ ssh -T git@github.com
+</code></pre><p>如配置了密码则要输入密码,输完按回车，如果是下面的反馈：</p>
+<pre><code>The authenticity of host &apos;github.com (207.97.227.239)&apos; can&apos;t be established.
+RSA key fingerprint is 16:27:ac:a5:76:28:2d:36:63:1b:56:4d:eb:df:a6:48.
+Are you sure you want to continue connecting (yes/no)?
+</code></pre><p>输入yes就好，然后会看到：</p>
+<pre><code>Hi cnfeat! You&apos;ve successfully authenticated, but GitHub does not provide shell access.
+</code></pre><p>说明Github中的ssh配置成功，再输入：</p>
+<pre><code>ssh -T git@git.coding.net
+</code></pre><p>进行同GitHub SSH测试相同步骤，如果显示以下则说明Coding中的SSH配置成功</p>
+<pre><code>Hello username You&apos;ve connected to Coding.net by SSH successfully!
+</code></pre><h3 id="创建Github-Pages和Coding-Pages-服务"><a href="#创建Github-Pages和Coding-Pages-服务" class="headerlink" title="创建Github Pages和Coding Pages 服务"></a>创建Github Pages和Coding Pages 服务</h3><p>GitHub Pages服务自动开启，共分两种，一种是你的GitHub用户名建立的username.github.io这样的用户&amp;组织页（站），另一种是依附项目的pages。想建立个人博客是用的第一种，nEdAy.github.io这样的可访问的站，由于规定必须项目名和用户名必须相同，所以每个用户名下面只能建立一个该页面，该功能自动开启。</p>
+<p>Coding Pages服务需手动开启，进入项目，点击 Pages 服务 ，键入部署分支名称（如master），再点击服务开启即可。</p>
+<h3 id="托管部署"><a href="#托管部署" class="headerlink" title="托管部署"></a>托管部署</h3><p>最后输入下列命令进行托管部署，同理，每次修改博客后都要执行下述命令。</p>
+<blockquote>
+<pre><code>hexo clean
+
+hexo generate
+
+hexo deploy
+</code></pre></blockquote>
+<p>等待上传，待托管部署后，用浏览器访问你的page页域名（如nEdAy.github.io或neday.coding.me），正常浏览则正面托管部署第三方成功。</p>
+<h2 id="附录"><a href="#附录" class="headerlink" title="附录"></a>附录</h2><h3 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h3><blockquote>
+<p>hexo new “postName” #新建文章(hexo n == hexo new)</p>
+<p>hexo new page “pageName” #新建页面</p>
+<p>hexo generate #生成静态页面至public目录(hexo g == hexo generate)</p>
+<p>hexo deploy #将.deploy_git目录部署到第三方托管平台(hexo d == hexo deploy)</p>
+<p>hexo help # 查看帮助</p>
+<p>hexo version #查看Hexo的版本</p>
+<p>hexo server #开启预览访问端口（hexo s == hexo server，默认端口4000，’ctrl +<br>c’关闭server）</p>
+</blockquote>
+<h3 id="复合命令"><a href="#复合命令" class="headerlink" title="复合命令"></a>复合命令</h3><blockquote>
+<p>hexo d -g  #生成加部署</p>
+<p>hexo s -g  #生成加预览</p>
+</blockquote>
+<hr>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ol>
+<li><a href="https://hexo.io/zh-cn/docs/index.html" target="_blank" rel="noopener">Hexo官方文档——开始使用——概述</a></li>
+</ol>
+<hr>
+<p>欢迎转载，请注明本文的链接地址： <a href="http://blog.neday.cn/2018/03/02/Hexo系列教程：基础篇（2）Hexo托管到GitHub和Coding/">http://blog.neday.cn/2018/03/02/Hexo系列教程：基础篇（2）Hexo托管到GitHub和Coding/</a> </p>
+
+      
+    </div>
+    
+    
+    
+
+    
+      <div>
+        <div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
+    <img id="wechat_subscriber_qcode" src="/images/wechat-qcode.jpg" alt="苏晟, nEdAy wechat" style="width: 200px; max-width: 100%;"/>
+    <div>欢迎您扫一扫上面的微信公众号，订阅我的博客！</div>
+</div>
+
+      </div>
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechat-reward-image.jpg" alt="苏晟, nEdAy 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay-reward-image.jpg" alt="苏晟, nEdAy 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Hexo/" rel="tag"># Hexo</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/03/02/Hexo系列教程：基础篇（1）Windows下安装部署Hexo/" rel="next" title="Hexo系列教程：基础篇（1）Windows下安装部署Hexo">
+                <i class="fa fa-chevron-left"></i> Hexo系列教程：基础篇（1）Windows下安装部署Hexo
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/03/02/Hexo系列教程：基础篇（3）Hexo域名绑定和域名解析/" rel="prev" title="Hexo系列教程：基础篇（3）Hexo域名绑定和域名解析">
+                Hexo系列教程：基础篇（3）Hexo域名绑定和域名解析 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.jpg"
+                alt="苏晟, nEdAy" />
+            
+              <p class="site-author-name" itemprop="name">苏晟, nEdAy</p>
+              <p class="site-description motion-element" itemprop="description">El Psy Congroo</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">10</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-name">标签</span>
+                
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/nEdAy" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:shengsu@iflytek.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://plus.google.com/108411952490686155132" target="_blank" title="Google">
+                      
+                        <i class="fa fa-fw fa-google"></i>Google</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://twitter.com/neday_" target="_blank" title="Twitter">
+                      
+                        <i class="fa fa-fw fa-twitter"></i>Twitter</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="http://www.zhihu.com/people/nEdAy" target="_blank" title="知乎">
+                      
+                        <i class="fa fa-fw fa-globe"></i>知乎</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://www.weibo.com/neday" target="_blank" title="微博">
+                      
+                        <i class="fa fa-fw fa-globe"></i>微博</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+            <div class="cc-license motion-element" itemprop="license">
+              <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" target="_blank">
+                <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons" />
+              </a>
+            </div>
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                Links
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://blog.neday.cn" title="苏晟’s Blog" target="_blank">苏晟’s Blog</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.neday.cn" title="口袋快爆" target="_blank">口袋快爆</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#托管前提"><span class="nav-number">1.1.</span> <span class="nav-text">托管前提</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#托管特性"><span class="nav-number">1.2.</span> <span class="nav-text">托管特性</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#GitHub和Coding又是什么？"><span class="nav-number">1.2.1.</span> <span class="nav-text">GitHub和Coding又是什么？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Page服务是什么？"><span class="nav-number">1.2.2.</span> <span class="nav-text">Page服务是什么？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#为什么用两个代码托管平台？"><span class="nav-number">1.2.3.</span> <span class="nav-text">为什么用两个代码托管平台？</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#正文"><span class="nav-number">2.</span> <span class="nav-text">正文</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#注册GitHub和Coding帐号"><span class="nav-number">2.1.</span> <span class="nav-text">注册GitHub和Coding帐号</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#创建Repository（项目仓库）"><span class="nav-number">2.2.</span> <span class="nav-text">创建Repository（项目仓库）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#修改Hexo配置文件，建立关联"><span class="nav-number">2.3.</span> <span class="nav-text">修改Hexo配置文件，建立关联</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置SSH-Key"><span class="nav-number">2.4.</span> <span class="nav-text">配置SSH-Key</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#创建Github-Pages和Coding-Pages-服务"><span class="nav-number">2.5.</span> <span class="nav-text">创建Github Pages和Coding Pages 服务</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#托管部署"><span class="nav-number">2.6.</span> <span class="nav-text">托管部署</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#附录"><span class="nav-number">3.</span> <span class="nav-text">附录</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#常用命令"><span class="nav-number">3.1.</span> <span class="nav-text">常用命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#复合命令"><span class="nav-number">3.2.</span> <span class="nav-text">复合命令</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考"><span class="nav-number">4.</span> <span class="nav-text">参考</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">苏晟, nEdAy</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.4</div>
+
+
+
+  <div class="footer-custom">Hosted by <a target="_blank" href="https://pages.coding.me">GitHub Pages</a></div>
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

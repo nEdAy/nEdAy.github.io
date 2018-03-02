@@ -1,0 +1,973 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+
+
+
+
+  <meta name="keywords" content="考试," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="前言简介本文绝大部分整合自胡明科和魏凯同学梳理并分享的两份笔记文档，并根据部分录音文件做了少许改动，如有错误和遗漏请在下方评论区进行讨论和补充。  正文考试结构 多选&amp;amp;填空题 关于MVC文件/文件夹说法正确的是？解：该部分内容参见课件，MVC项目结构，如：①Global.asax，在应用程序的根目录下，用于处理应用程序级事件的文件②最开始启动的是App_Start，由Global.asa">
+<meta name="keywords" content="考试">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2013级MS_Web开发框架技术（二）期末考试复习整合">
+<meta property="og:url" content="http://blog.neday.cn/2018/03/02/2013级MS_Web开发框架技术（二）期末考试复习整合/index.html">
+<meta property="og:site_name" content="苏晟&#39;s Blog">
+<meta property="og:description" content="前言简介本文绝大部分整合自胡明科和魏凯同学梳理并分享的两份笔记文档，并根据部分录音文件做了少许改动，如有错误和遗漏请在下方评论区进行讨论和补充。  正文考试结构 多选&amp;amp;填空题 关于MVC文件/文件夹说法正确的是？解：该部分内容参见课件，MVC项目结构，如：①Global.asax，在应用程序的根目录下，用于处理应用程序级事件的文件②最开始启动的是App_Start，由Global.asa">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://neday-blog.image.alimmdn.com/ms_2016_01.png?t=1467444903803">
+<meta property="og:updated_time" content="2017-03-29T07:00:56.070Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="2013级MS_Web开发框架技术（二）期末考试复习整合">
+<meta name="twitter:description" content="前言简介本文绝大部分整合自胡明科和魏凯同学梳理并分享的两份笔记文档，并根据部分录音文件做了少许改动，如有错误和遗漏请在下方评论区进行讨论和补充。  正文考试结构 多选&amp;amp;填空题 关于MVC文件/文件夹说法正确的是？解：该部分内容参见课件，MVC项目结构，如：①Global.asax，在应用程序的根目录下，用于处理应用程序级事件的文件②最开始启动的是App_Start，由Global.asa">
+<meta name="twitter:image" content="http://neday-blog.image.alimmdn.com/ms_2016_01.png?t=1467444903803">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://blog.neday.cn/2018/03/02/2013级MS_Web开发框架技术（二）期末考试复习整合/"/>
+
+
+
+
+
+  <title>2013级MS_Web开发框架技术（二）期末考试复习整合 | 苏晟's Blog</title>
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?5e783c61f6316a3becf5a44f4b640109";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">苏晟's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Android程序猿，信息安全爱好者</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404.html" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />
+            
+            公益404
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-coupon">
+          <a href="http://www.neday.cn" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            coupon
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://blog.neday.cn/2018/03/02/2013级MS_Web开发框架技术（二）期末考试复习整合/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="苏晟, nEdAy">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="苏晟's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">2013级MS_Web开发框架技术（二）期末考试复习整合</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-02T10:11:18+08:00">
+                2018-03-02
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <hr>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p>本文绝大部分整合自胡明科和魏凯同学梳理并分享的两份笔记文档，并根据部分录音文件做了少许改动，如有错误和遗漏请在下方评论区进行讨论和补充。</p>
+<hr>
+<h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><h3 id="考试结构"><a href="#考试结构" class="headerlink" title="考试结构"></a>考试结构</h3><p><img src="http://neday-blog.image.alimmdn.com/ms_2016_01.png?t=1467444903803" alt="ms_2016_01"></p>
+<h3 id="多选-amp-填空题"><a href="#多选-amp-填空题" class="headerlink" title="多选&amp;填空题"></a>多选&amp;填空题</h3><ol>
+<li><p>关于MVC文件/文件夹说法正确的是？<br>解：该部分内容参见课件，MVC项目结构，如：<br>①Global.asax，在应用程序的根目录下，用于处理应用程序级事件的文件<br>②最开始启动的是App_Start，由Global.asax调用，放置应用程序启动执行的代码文件<br>  MVC程序的执行过程：Global.asax调用App_Start的各个文件-》默认控制器-》控制器对应的视图</p>
+</li>
+<li><p>MVC程序的技术要素包括哪些？<br>解：路由、控制器、视图、配置文件、过滤器</p>
+</li>
+<li><p>某通过编译的MVC程序运行输出视图不存在的可能原因？<br>解：<br>①视图没有创建<br>②视图创建了保存位置位置不对<br>③控制器没有调用视图的方法<br>④控制器没有指定视图的路径</p>
+</li>
+<li><p>构造一个新局部类，应该具有什么特性？<br>解：元数据类型特性，即MetadataType(Attribute)</p>
+</li>
+<li><p>去获取上传对象文件的方法<br>解：<br>①Request.Files（原始Form文件上传）<br>②接收上传文件HttpPostedFileBase对象参数（应用MVC文件上传）</p>
+</li>
+<li><p>哪些方法可以从控制器传递数据到视图？<br> 解：ViewData、ViewBag、TempData、Session、Model、Tuple<br> (适合传递的模型数据可以用View+Model，Model可以是有广泛含义的，如List)</p>
+</li>
+<li><p>ModelState包含两部分内容<br>解：原始数据、验证数据</p>
+</li>
+<li><p>通过搭建什么项目可以实现系统分离前后端？<br>解：分区项目（分区项目优势是（实现前端和后端的分离））</p>
+</li>
+<li><p>在实际开发中，模型通常分为哪两种模型？<br>解：视图模型和业务模型</p>
+</li>
+<li><p>MVC路由系统的主要职责是将各种URL请求转发给谁处理？<br>解：控制器</p>
+</li>
+<li><p>控制器和方法区分，给出URL请求，区分控制器是什么，动作方法是什么？<br>解：前面是控制器，然后是动作方法，动作方法的标准写法是在名称后加括号</p>
+</li>
+<li><p>使用什么可以在控制器和视图中获取路由数据?<br>解：RouteData，可以说路由数据可以在控制器和视图中查取。</p>
+</li>
+<li><p>什么对象可以用来跨请求传递数据？<br>解：Session（TempData也行）</p>
+</li>
+<li><p>什么方法可以内联调用动作方法并输出视图?<br>解：Html.RenderAction</p>
+</li>
+<li><p>谁是辅助视图生成页面元素的工具类？<br>解：HtmlHelper</p>
+</li>
+<li><p>Razor视图服务端代码以什么开头？<br>解：@</p>
+</li>
+<li><p>给一段代码判断哪部分有问题,不能通过正常编译<br>解：如可空，把空值赋给可空类型，把空值赋给不可空类型等。详情见课件二。</p>
+</li>
+<li><p>谁跟谁的数据是相通的？<br>解：ViewBag和ViewData</p>
+</li>
+<li><p>实现新功能（如活动）放在那一层实现较合适？<br>解：业务逻辑层</p>
+</li>
+<li><p>在视图当中使用CKEditor代替的是什么？<br>解：TextArea（富文本编辑框）</p>
+</li>
+<li><p>扩展方法（如验证email属性有没有符合定义的正则表达式）的参数前面加this,那么在匹配验证规则是用(对象.xxx),还是(this.xxx)<br>解：如参数为this.User.user ,进行邮箱匹配的时候写(user.email),即(对象.xxx)</p>
+</li>
+<li><p>访问URL地址，显示“找不到页面”的错误原因？<br>解：页面没有创建，控制器没有写View</p>
+</li>
+<li><p>Ajax实现后台的数据验证，使用的返回类型为？<br>解：JSON，JSON可与AJAX可配合使用</p>
+</li>
+<li><p>进行模型分解的时候可以分为视图模型(View Model)和业务模型(Business Model)，他们分别可以定义什么类，运用什么特性？<br>解：都可以定义为Partial类，View Model还可以定义元数据的内部类，且可定义属性，运用MetadataType特性。它们应用这样的元数据类型，把自己加到分解视图当中。</p>
+</li>
+<li><p>路由规则，URL地址，路由数据相关问题。<br>解：<br>①问法一，给定路由规则，URL地址，路由数据匹，判断是匹配？<br>②问法二，根据路由规则，给定URL地址，问路由数据是什么？<br>③取路由数据时，动作方法后面要加括号。<br>④URL中没有给出的路由数据为NULL，而不是空字符串<br>⑤贪婪匹配规则：匹配最后一个适合的，取相应路由数据。<br>⑥字面量不可变，占位符可变，占位符内容是什么取决于URL写了什么，类似于变量，写路由规则的时候可以给他们设置默认值，如果URL没有给出相应的值，就取默认值。<br>⑦“/”是默认匹配的字面量，字面量只有“/”，一些占位符的值可以使用默认的，但当包含默认匹配字面量外的字面量时，为占位符定义的默认值不起作用。<br>⑥详细见第三个课件11,12,13,16,19-21页。</p>
+</li>
+<li><p>内连方式Html.RenderAction()用法<br>解：<br>①把方法写到HomeController里<br>②新建该方法对应的强类型视图（列表型）<br>③在母版中相应位置添加内连引用</p>
+</li>
+<li><p>关于ActionName特性，为动作方法取别名的问题。<br>解：创建视图的时候，视图名称是跟ActionResult(Register)匹配的，而不是ActionName(RegisterUser)匹配。</p>
+</li>
+<li><p>自动类型转换隐式动作类型问题。<br>解：控制器方法返回值多为ActionResult，如果想让返回值类型设置为其他类型，则可以使用隐式动作类型，MVC会进行自动类型转换，例如返回类型是int，则会自动转换为常用的输出类型ContentResult（文本输出）。</p>
+</li>
+<li><p>表单元素命名规则问题。（两道题）<br>解：进行模型绑定，动作方法参数名和属性之间用“.”进行访问；如果其属性也是Model，继续用“.”进行访问；如果是模型集合，访问其属性以动作方法参数名+序号+属性，命名前缀可以统一加或不加。<br>①模型包含模型 ：动作方法参数名.属性.属性<br>②模型集合：动作方法参数名[序号].属性.属性<br>③对象包含模型集合：动作方法参数名.属性[序号].属性</p>
+</li>
+<li><p>解决控制器同名方法的问题。(详见课件四, 22页到25页)<br>解：路由系统不能根据动作方法的参数定义动作方法，所以解决方法同名的手段：<br>①NonAction特性，声明为非动作方法<br>②ActionName特性，为动作方法取别名<br>③针对请求类型定位</p>
+</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>方法名</th>
+<th>请求类型</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>HttpGet</td>
+<td>针对Get请求</td>
+</tr>
+<tr>
+<td>HttpPost</td>
+<td>针对Post请求</td>
+</tr>
+<tr>
+<td>HttpDelete</td>
+<td>针对Delete请求</td>
+</tr>
+<tr>
+<td>HttpPut</td>
+<td>针对Put请求</td>
+</tr>
+</tbody>
+</table>
+<h3 id="判断题"><a href="#判断题" class="headerlink" title="判断题"></a>判断题</h3><ol>
+<li><p>MVC作为三层架构程序的表现层<br>解：正确</p>
+</li>
+<li><p>ModelState包含了页面向控制器传输的数据的存储，以及经过验证规则得到验证失败的信息的存储，可以自定义验证的错误信息<br>解：正确(ModelState对象的数据含有表单数据容器和验证结果容器，可以自定义验证错误信息。模型映射自动应用验证规则，ModelState完成初始化。 )</p>
+</li>
+<li><p>HtmlHelper的某些方法的实质是使用了ModelState的数据<br>解：正确(Html.ErrorMessage就是用了ModelState中数据)</p>
+</li>
+<li><p>在模型自动绑定的时候会向ModelState添加数据<br> 解：正确</p>
+</li>
+<li><p>在视图当中不能直接获取ModelState对象<br>解：错误</p>
+</li>
+<li><p>在动作方法中可以直接输出Javascript脚本<br>解：正确</p>
+</li>
+<li><p>动作方法的返回类型必须是ActionResult<br>解：错误</p>
+</li>
+<li><p>动作方法返回类型必须是基本数据类型<br>解：错误</p>
+</li>
+<li><p>动作方法返回类型可以是可空类型，并且有可选参数<br> 解：正确</p>
+</li>
+<li><p>动作方法的参数只能是基本数据类型<br>解：错误</p>
+</li>
+<li><p>动作方法的参数类型可以是可空类型或可选参数类型<br>解：正确</p>
+</li>
+<li><p>分离模型验证规则，构建一个新的局部类，局部类包含元数据类<br>解：正确</p>
+</li>
+<li><p>元数据类包含属性并包含验证规则<br>解：正确</p>
+</li>
+<li><p>MVC和三层框架是为了应用程序的分离<br>解：正确 (MVC强调逻辑分离，三层框架强调物理分离)</p>
+</li>
+<li><p>命名参数的参数Ⅰ，不一定是方法参数中的第一个参数<br>解：正确</p>
+</li>
+<li><p>隐式类型在定义的时候可以不用同时进行初始化（选择）<br>解：错误(定义时必须进行初始化)</p>
+</li>
+<li><p>MVC中模型代码可以对应三层模型中的业务逻辑层和数据访问层<br>解：正确 (视图和控制器对应表示层，模型对应业务逻辑层、数据访问层、模型实体层)</p>
+</li>
+<li><p>一个目标元素、一个属性或Class只能有一个特性<br>解：错误</p>
+</li>
+<li><p>MVC当中只提供路由匹配中间参数的默认值是不起作用的<br>解：正确 </p>
+</li>
+<li><p>可以通过不同的路由名称定义多组路由<br>解：正确</p>
+</li>
+<li><p>ViewBag是动态（dynamic）类型的一种字典集合数据，是视图基类和控制器基类的属性 （TempData， RouteData也是视图基类和控制器基类的属性）<br>解：正确</p>
+</li>
+<li><p>View是视图的基类<br>解：正确</p>
+</li>
+<li><p>在实际开发中，ViewBag和ViewData通常只使用一种以保证代码统一<br>解：正确</p>
+</li>
+<li><p>Razor是ASP .NET MVC当中可替代Aspx的视图引擎<br>解：正确</p>
+</li>
+<li><p>视图和控制器有继承关系<br>解：错误</p>
+</li>
+<li><p>Aspx视图中不可以定义全局变量<br>解：错误</p>
+</li>
+<li><p>Model是必须的，路由可有可无<br>解：错误</p>
+</li>
+<li><p>控制器的命名和视图文件夹的命名有对应关系<br>解：正确</p>
+</li>
+<li><p>URL模式大小写不敏感<br>解：正确</p>
+</li>
+<li><p>有一道题关于Html.ValidationSummary是错误信息的集合，包含原始的和自定义的错误信息。<br>解：正确</p>
+</li>
+</ol>
+<h3 id="上机题"><a href="#上机题" class="headerlink" title="上机题"></a>上机题</h3><p>50%上机，当场评定成绩 分为前端和后端 自己创建数据库，创建表，表有两张，主外键关联，id主键自动增长</p>
+<blockquote>
+<p>1.搭建基于MVC三层架构<br>2.搭建后台分区项目Areas，前端和后端<br>3.包括一个信息列表，包含分页功能，从数据库中取出来，<br>4.在列表中按照某一些字段进行条件查询<br>5.在列表中有详细信息页面，3种方法都可以<br>6.对表信息的添加，要求进行Ajax重复数据验证，客户端非空验证<br>7.执行数据的正确，添加的正确，列表的正确，表名，字段名都要严格按照要求<br>8.两种分页熟悉一种，查询时加上查询限定条件<br>9.会使用模型进行自动的绑定，模型绑定使用验证规则，使用MVC验证框架，Html辅助方法创建表单。<br>10.熟悉基本命名规则，非空，Email，jQuery实现客户端验证。</p>
+</blockquote>
+<hr>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ol>
+<li><a href="http://neday-blog.file.alimmdn.com/MS%E5%A4%8D%E4%B9%A0.wps?t=1467445163235" target="_blank" rel="noopener">MS复习_胡明科</a></li>
+<li><a href="http://neday-blog.file.alimmdn.com/MS%E6%9C%9F%E6%9C%AB%E8%80%83%E8%AF%95%E5%A4%8D%E4%B9%A0%E7%AE%80%E4%B9%A6.docx?t=1467445161254" target="_blank" rel="noopener">MS期末考试复习简书 _魏凯</a></li>
+</ol>
+<p>欢迎转载，请注明本文的链接地址： <a href="http://blog.neday.cn/2018/03/02/2013级MS_Web开发框架技术（二）期末考试复习整合/">http://blog.neday.cn/2018/03/02/2013级MS_Web开发框架技术（二）期末考试复习整合/</a> </p>
+
+      
+    </div>
+    
+    
+    
+
+    
+      <div>
+        <div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
+    <img id="wechat_subscriber_qcode" src="/images/wechat-qcode.jpg" alt="苏晟, nEdAy wechat" style="width: 200px; max-width: 100%;"/>
+    <div>欢迎您扫一扫上面的微信公众号，订阅我的博客！</div>
+</div>
+
+      </div>
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechat-reward-image.jpg" alt="苏晟, nEdAy 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay-reward-image.jpg" alt="苏晟, nEdAy 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/考试/" rel="tag"># 考试</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/03/02/hello-world/" rel="next" title="Hello World">
+                <i class="fa fa-chevron-left"></i> Hello World
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/03/02/Android多渠道打包方案对比分析/" rel="prev" title="Android多渠道打包方案对比分析">
+                Android多渠道打包方案对比分析 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.jpg"
+                alt="苏晟, nEdAy" />
+            
+              <p class="site-author-name" itemprop="name">苏晟, nEdAy</p>
+              <p class="site-description motion-element" itemprop="description">El Psy Congroo</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">10</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-name">标签</span>
+                
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/nEdAy" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:shengsu@iflytek.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://plus.google.com/108411952490686155132" target="_blank" title="Google">
+                      
+                        <i class="fa fa-fw fa-google"></i>Google</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://twitter.com/neday_" target="_blank" title="Twitter">
+                      
+                        <i class="fa fa-fw fa-twitter"></i>Twitter</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="http://www.zhihu.com/people/nEdAy" target="_blank" title="知乎">
+                      
+                        <i class="fa fa-fw fa-globe"></i>知乎</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://www.weibo.com/neday" target="_blank" title="微博">
+                      
+                        <i class="fa fa-fw fa-globe"></i>微博</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+            <div class="cc-license motion-element" itemprop="license">
+              <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" target="_blank">
+                <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons" />
+              </a>
+            </div>
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                Links
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://blog.neday.cn" title="苏晟’s Blog" target="_blank">苏晟’s Blog</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.neday.cn" title="口袋快爆" target="_blank">口袋快爆</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#简介"><span class="nav-number">1.1.</span> <span class="nav-text">简介</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#正文"><span class="nav-number">2.</span> <span class="nav-text">正文</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#考试结构"><span class="nav-number">2.1.</span> <span class="nav-text">考试结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#多选-amp-填空题"><span class="nav-number">2.2.</span> <span class="nav-text">多选&amp;填空题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#判断题"><span class="nav-number">2.3.</span> <span class="nav-text">判断题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#上机题"><span class="nav-number">2.4.</span> <span class="nav-text">上机题</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考"><span class="nav-number">3.</span> <span class="nav-text">参考</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">苏晟, nEdAy</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.4</div>
+
+
+
+  <div class="footer-custom">Hosted by <a target="_blank" href="https://pages.coding.me">GitHub Pages</a></div>
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
