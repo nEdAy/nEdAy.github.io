@@ -925,22 +925,7 @@ var jiathis_config={
 
   
 
-  	
-	<canvas id="live2dcanvas" width="300" height="600" class="live2d"></canvas>
-	<%- live2d("live2dcanvas") %>
-	<style>
-	.live2d{
-	  position: fixed;
-		bottom: -30px;
-		right: 0px;
-		z-index: 999;
-		width: 150px;
-		height: 300px;
-	  pointer-events: none;
-	}
-	</style>
-	
-<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"model":"koharu","bottom":-60,"mobileShow":false});</script></body>
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"model":{"jsonPath":"/live2dw/assets/wanko.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":false}});</script></body>
 </html>
 <!-- 页面点击小红心 -->
 <script type="text/javascript" src="/js/src/love.js"></script>
