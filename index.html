@@ -2075,8 +2075,21 @@ Hexo系列教程：基础篇（1）Windows下安装部署Hexo
   
 
   	
-  undefined
-<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"model":"wanko","bottom":-30});</script></body>
+	<canvas id="live2dcanvas" width="300" height="600" class="live2d"></canvas>
+	<%- live2d("live2dcanvas") %>
+	<style>
+	.live2d{
+	  position: fixed;
+		bottom: -30px;
+		right: 0px;
+		z-index: 999;
+		width: 150px;
+		height: 300px;
+	  pointer-events: none;
+	}
+	</style>
+	
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"model":"koharu","bottom":-60,"mobileShow":false});</script></body>
 </html>
 <!-- 页面点击小红心 -->
 <script type="text/javascript" src="/js/src/love.js"></script>
